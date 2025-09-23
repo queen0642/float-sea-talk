@@ -2,41 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Ocean-themed design system with deep blue gradients and marine aesthetics */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Ocean-inspired background gradients */
+    --background: 220 30% 8%;
+    --foreground: 190 100% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Ocean surface cards */
+    --card: 220 25% 12%;
+    --card-foreground: 190 100% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Deep water popovers */
+    --popover: 220 30% 10%;
+    --popover-foreground: 190 100% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Ocean primary - deep cyan */
+    --primary: 190 100% 45%;
+    --primary-foreground: 220 30% 8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - ocean foam */
+    --secondary: 200 80% 25%;
+    --secondary-foreground: 190 100% 95%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted ocean depths */
+    --muted: 220 20% 15%;
+    --muted-foreground: 190 40% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - bright aqua */
+    --accent: 180 100% 60%;
+    --accent-foreground: 220 30% 8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive - coral warning */
+    --destructive: 15 85% 55%;
+    --destructive-foreground: 190 100% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Ocean borders and inputs */
+    --border: 200 40% 20%;
+    --input: 200 40% 18%;
+    --ring: 190 100% 45%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Ocean gradient definitions */
+    --gradient-ocean: linear-gradient(135deg, hsl(190 100% 45%), hsl(220 80% 25%), hsl(240 60% 15%));
+    --gradient-surface: linear-gradient(180deg, hsl(190 80% 50%), hsl(200 70% 40%));
+    --gradient-deep: linear-gradient(45deg, hsl(220 60% 15%), hsl(240 40% 8%));
+    
+    /* Ocean glow effects */
+    --glow-primary: 0 0 30px hsl(190 100% 45% / 0.3);
+    --glow-accent: 0 0 20px hsl(180 100% 60% / 0.4);
+    
+    /* Smooth ocean transitions */
+    --transition-ocean: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Floating animation keyframes */
+    --float-distance: 15px;
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +123,88 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background: var(--gradient-deep);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Ocean-themed gradient backgrounds */
+  .bg-ocean-gradient {
+    background: var(--gradient-ocean);
+  }
+  
+  .bg-surface-gradient {
+    background: var(--gradient-surface);
+  }
+  
+  .bg-deep-gradient {
+    background: var(--gradient-deep);
+  }
+  
+  /* Glow effects for data points and highlights */
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+  
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+  
+  /* Ocean wave animation */
+  .wave-animation {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .wave-animation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(190 100% 45% / 0.1), transparent);
+    animation: wave 3s infinite;
+  }
+  
+  /* Floating elements like ARGO data floats */
+  .float-element {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .float-element:nth-child(2n) {
+    animation-delay: -2s;
+  }
+  
+  .float-element:nth-child(3n) {
+    animation-delay: -4s;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(var(--float-distance)) rotate(1deg);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(190 100% 45% / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(190 100% 45% / 0.6);
   }
 }
