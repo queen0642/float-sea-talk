@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, BarChart3, Database } from "lucide-react";
-import seaVoiceLogo from "@/assets/sea-voice-logo.jpg";
+import seaVoiceLogo from "@/assets/sea-voice-logo.png";
 
 const FloatChatHeader = () => {
   return (
@@ -27,13 +27,6 @@ const FloatChatHeader = () => {
             <Button variant="ghost" className="flex items-center space-x-2">
               <BarChart3 className="h-4 w-4" />
               <span>Visualize</span>
-            </Button>
-            <Button variant="ghost" className="flex items-center space-x-2">
-              <Database className="h-4 w-4" />
-              <span>Data</span>
-            </Button>
-            <Button variant="default" className="glow-primary">
-              Get Started
             </Button>
           </nav>
         </div>

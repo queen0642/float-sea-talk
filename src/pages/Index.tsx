@@ -40,27 +40,14 @@ const Index = () => {
               largest ocean observation network.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="glow-primary animate-pulse-glow">
+            <div className="flex justify-center">
+              <Button size="lg" className="border-primary/50 hover:bg-primary/10" variant="outline">
                 Start Exploring
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button variant="outline" size="lg" className="border-primary/50 hover:bg-primary/10">
-                View Demo
               </Button>
             </div>
           </div>
           
-          {/* Floating Elements */}
-          <div className="absolute top-20 left-10 opacity-60">
-            <Waves className="h-12 w-12 text-primary animate-float" />
-          </div>
-          <div className="absolute top-32 right-16 opacity-40">
-            <Globe className="h-16 w-16 text-accent animate-float" />
-          </div>
-          <div className="absolute bottom-20 left-1/4 opacity-50">
-            <BarChart3 className="h-10 w-10 text-primary animate-float" />
-          </div>
         </div>
       </section>
 
@@ -148,10 +135,6 @@ const Index = () => {
             Join researchers worldwide who are using Sea Voice to unlock 
             new discoveries in ocean science.
           </p>
-          <Button size="lg" variant="secondary" className="glow-accent">
-            Get Started Today
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
         </div>
       </section>
 
