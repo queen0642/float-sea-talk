@@ -25,7 +25,7 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-ocean-gradient bg-clip-text text-transparent">
-                FloatChat
+                Sea Voice
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-foreground/90 mb-4">
@@ -120,7 +120,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="text-3xl font-bold mb-6">
-                Experience FloatChat in Action
+                Experience Sea Voice in Action
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
                 See how easy it is to explore ocean data through natural conversation. 
@@ -145,7 +145,7 @@ const Index = () => {
             Ready to Explore the Ocean's Secrets?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Join researchers worldwide who are using FloatChat to unlock 
+            Join researchers worldwide who are using Sea Voice to unlock 
             new discoveries in ocean science.
           </p>
           <Button size="lg" variant="secondary" className="glow-accent">
@@ -158,7 +158,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-12 bg-card border-t border-border">
         <div className="container mx-auto px-6 text-center text-muted-foreground">
-          <p>© 2024 FloatChat. Powered by ARGO Global Ocean Observing System.</p>
+          <p>© 2024 Sea Voice. Powered by ARGO Global Ocean Observing System.</p>
         </div>
       </footer>
     </div>

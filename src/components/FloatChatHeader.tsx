@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle, BarChart3, Database, Waves } from "lucide-react";
+import { MessageCircle, BarChart3, Database } from "lucide-react";
+import seaVoiceLogo from "@/assets/sea-voice-logo.jpg";
 
 const FloatChatHeader = () => {
   return (
@@ -8,9 +9,9 @@ const FloatChatHeader = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="flex items-center space-x-2">
-              <Waves className="h-8 w-8 text-primary animate-float" />
+              <img src={seaVoiceLogo} alt="Sea Voice Logo" className="h-8 w-8 rounded-full" />
               <h1 className="text-2xl font-bold bg-ocean-gradient bg-clip-text text-transparent">
-                FloatChat
+                Sea Voice
               </h1>
             </div>
             <div className="hidden md:block text-sm text-muted-foreground">
